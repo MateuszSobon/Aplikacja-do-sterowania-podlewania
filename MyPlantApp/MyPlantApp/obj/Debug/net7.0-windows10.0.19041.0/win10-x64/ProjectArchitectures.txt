@@ -1,0 +1,1 @@
+D:\CPP\03.04.2023\MyPlantApp\MyPlantApp\MyPlantApp.csproj;x64

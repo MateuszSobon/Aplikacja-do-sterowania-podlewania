@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyPlantApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="kropla.png"
+                HeightRequest="150"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Wilgotność powietrza:"
+                FontSize="24"
+                HorizontalOptions="Center" />
+            
+            <Label
+                x:Name="wilLabel"
+                Text="- %"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <Image
+                Source="termometr.png"
+                HeightRequest="150"
+                HorizontalOptions="Center" 
+                />
+
+            <Label
+                Text="Temperatura powietrza:"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="tempLabel"
+                Text="- °C"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <Image
+                Source="kwiat.png"
+                HeightRequest="150"
+                HorizontalOptions="Center" 
+                />
+
+            <Label
+                Text="Wilgotność gleby:"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="glebaLabel"
+                Text="- %"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <Picker
+                x:Name="picker"
+                MaximumWidthRequest="140"
+                HorizontalTextAlignment="Center"/>
+
+            <Label
+               x:Name="trybPracyLabel"
+               Text="Tryb podstawowy"
+               FontSize="14"
+               HorizontalOptions="Center" />
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="15">
+                
+                <Button
+                x:Name="CounterBtn"
+                Text="Odśwież"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+                <Button
+                x:Name="CounterBtn2"
+                Text="Zmień tryb"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="CounterBtn2_Clicked"
+                HorizontalOptions="Center" />
+                
+            </HorizontalStackLayout>
+
+            <Label
+               FontSize="5"
+               HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
