@@ -52,11 +52,11 @@ namespace MyPlantApp
 
                 if (newLista.Count == 7 )
                 {
-                    wilLabel.Text = ((decimal.Parse(newLista[1]) + decimal.Parse(newLista[2])) /2).ToString() + " °C"; 
+                    wilLabel.Text = ((decimal.Parse(newLista[1]) + decimal.Parse(newLista[2])) /2).ToString() + " %"; 
 
-                    tempLabel.Text = ((decimal.Parse(newLista[3]) + decimal.Parse(newLista[4])) / 2).ToString() + " %"; 
+                    tempLabel.Text = ((decimal.Parse(newLista[3]) + decimal.Parse(newLista[4])) / 2).ToString() + " °C"; 
 
-                    glebaLabel.Text = ((decimal.Parse(newLista[5]) + decimal.Parse(newLista[6])) / 2).ToString() + "";
+                    glebaLabel.Text = ((decimal.Parse(newLista[5]) + decimal.Parse(newLista[6])) / 200).ToString() + " %"; //poprawić
 
                     trybPracyLabel.Text = WorkName(int.Parse(newLista[0]));
                 }
@@ -69,7 +69,7 @@ namespace MyPlantApp
 
         }
 
-        private void CounterBtn2_Clicked(object sender, EventArgs e)
+        private void CounterBtn2Clicked(object sender, EventArgs e)
         {
             string helper;
             int tryb;
@@ -104,6 +104,10 @@ namespace MyPlantApp
             {
                 DisplayAlert("Zmiana trybu", "Tryb pracy został zmieniony", "OK");
                 trybPracyLabel.Text = WorkName(tryb);
+            }
+            else
+            {
+                DisplayAlert("Błąd odpowiedzi", $"Serwer zwrócił niepoprawną odpowiedź.", "OK");
             }
         }
 

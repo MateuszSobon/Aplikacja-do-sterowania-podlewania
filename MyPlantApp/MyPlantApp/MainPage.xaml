@@ -85,7 +85,7 @@
                 x:Name="CounterBtn2"
                 Text="Zmień tryb"
                 SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="CounterBtn2_Clicked"
+                Clicked="CounterBtn2Clicked"
                 HorizontalOptions="Center" />
                 
             </HorizontalStackLayout>
